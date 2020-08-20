@@ -5,7 +5,7 @@ cd copy_for_CodeTantra
 pip install -r requirements.txt
 ```
 ### Usage
-'''bash
+```bash
 python main.py
 ```
 
