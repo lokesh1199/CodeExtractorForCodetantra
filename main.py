@@ -11,3 +11,4 @@ code = code.find_all('div', class_='ace_line')
 with open('out.txt', 'w') as f:
     for i in code:
         f.write(i.text+'\n')
+        print(i.text)
