@@ -4,9 +4,12 @@ with open('test.html') as f:
     soup = BeautifulSoup(f, 'html.parser')
 
 
-code = soup.find('div', class_='ace_layer ace_text-layer')
+code = soup.find_all('div', class_='ace_layer ace_text-layer')
 
-code = code.find_all('div', class_='ace_line')
+if len(code[0]):
+    code = code[0].find_all('div', class_='ace_line')
+else:
+    code = code[1].find_all('div', class_='ace_line')
 
 with open('out.txt', 'w') as f:
     for i in code:
