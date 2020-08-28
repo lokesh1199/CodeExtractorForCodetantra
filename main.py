@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import sys
 
 with open('test.html') as f:
     soup = BeautifulSoup(f, 'html.parser')
@@ -6,10 +7,10 @@ with open('test.html') as f:
 
 code = soup.find_all('div', class_='ace_layer ace_text-layer')
 
-if len(code[0]):
+if len(sys.argv) == 1:
     code = code[0].find_all('div', class_='ace_line')
 else:
-    code = code[1].find_all('div', class_='ace_line')
+    code = code[int(sys.argv[1])].find_all('div', class_='ace_line')
 
 with open('out.txt', 'w') as f:
     for i in code:
