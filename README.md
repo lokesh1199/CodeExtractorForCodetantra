@@ -6,8 +6,11 @@ pip install -r requirements.txt
 ```
 ### Usage
 ```bash
-python main.py
+python main.py <optional number for tab>
 ```
-
+eg:
+```bash
+python main.py 1
+```
 ### Files
 make sure you have the html file in current directory with name 'test.html'
