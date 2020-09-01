@@ -14,5 +14,5 @@ else:
 
 with open('out.txt', 'w') as f:
     for i in code:
-        f.write(i.text+'\n')
+        f.write(i.text.lstrip()+'\n')
         print(i.text)
